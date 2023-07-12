@@ -23,9 +23,10 @@ class InorderTraversal:
     def _body(self, node: Node, target: int):
         if node.value > target and self.value is None:
             self.value = node.value
+            return self.value
 
     def inorderTraversal(self, node: Node, target: int):
-        if node:
+        if node and self.value is None:
             self.inorderTraversal(node.left, target)
             self._body(node, target)
             self.inorderTraversal(node.right, target)

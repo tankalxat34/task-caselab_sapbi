@@ -63,6 +63,13 @@ class Testing(TestCase):
     
     def test_random_edge_cases(self):
         return self.random_tst(2000000, 1, 10000000, 3)
+    
+    # def test_random_billion_cases(self):
+    #     """
+    #     Тест на миллиард, может не хватить памяти
+    #     """
+    #     return self.random_tst(2000000000, 1, 10000000000, 3)
+
 
 if __name__ == "__main__":
     unittest.main()
